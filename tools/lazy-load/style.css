@@ -1,0 +1,14 @@
+body{margin:0;background-color:#111111;overflow-x:hidden;padding:50px}
+img{width:100%}
+
+.box {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 50px;
+}
+
+.parent img {
+	width: 100%;
+	display: block;
+	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7);
+}

@@ -1,0 +1,21 @@
+/* scroll-bar */
+
+/* ширина */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* фон */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* колір */
+::-webkit-scrollbar-thumb {
+    background-color: #101010;
+    /* border: 3px solid #f1f1f1; */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: royalblue;
+}

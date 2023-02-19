@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en" class="light">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>themes</title>
+
+	<style>
+
+		body.light-theme {
+			--color-bg: #f1f1f1;
+			--color-text: #010101;
+		}
+
+		body.dark-theme {
+			--color-bg: #010101;
+			--color-text: #f1f1f1;
+		}
+
+		body {
+			background-color: var(--color-bg);
+			color: var(--color-text);
+		}
+		
+	</style>
+</head>
+
+<body class="light-theme">
+
+	<div class="box">
+
+		<div class="themes">
+
+			<button onclick="switchToLight()">Light Theme</button>
+  			<button onclick="switchToDark()">Dark Theme</button>
+
+		</div>
+
+		<p>
+			Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Adipisci mollitia voluptatibus.
+		</p>
+
+	</div>
+
+	<script>
+
+		function switchToLight() { document.body.className = "light-theme"; }
+		function switchToDark() { document.body.className = "dark-theme"; }
+
+	</script>
+</body>
+</html>

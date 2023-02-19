@@ -1,0 +1,66 @@
+.card {
+	min-height: 300px;
+
+	color: #000;
+	background-color: #fff;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+
+	width: 200px;
+}
+
+.slider-container {
+	position: relative;
+
+	max-width: 1300px;
+
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+/* це для того щоб кружечки навігації були під слайдером */
+
+.swiper {
+	padding-bottom: 40px;
+}
+
+/* стилізацію навігаційних точок */
+
+.swiper-pagination-bullet {
+	width: 10px;
+	height: 10px;
+	margin: 0 15px;
+	background-color: #fff;
+	opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: green;
+}
+
+/* стилізацію навігаційних кнопок */
+
+.swiper-button-prev,
+.swiper-button-next {
+	background-color: green;
+	color: #fff;
+}
+
+/* вимкниння класичних кнопок */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+	display: none;
+}
+
+/* кнопки за межами слайдера */
+/* потрібно просто зробити для них position стардатним */
+/* ставити їх де вам потрібно */
+/* 	
+.swiper-button-prev,
+.swiper-button-next {
+	position: static;
+} 
+*/

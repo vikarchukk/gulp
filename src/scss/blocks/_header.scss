@@ -1,0 +1,53 @@
+.header {
+
+  &__wrap {
+    @apply py-[30px] flex justify-between items-center;
+  }
+
+  &__logo { @apply text-2xl }
+}
+
+$openNav: 777px;
+
+.nav {
+
+  &.nav-active { @apply translate-y-full }
+
+  @media (max-width: $openNav) {
+    @apply bg-black h-screen w-full
+    absolute bottom-full left-0 flex 
+    overflow-auto text-center z-40
+    duration-1000 transition-all;
+  }
+
+  a { 
+    @apply text-[18px] leading-[22px] text-white 
+    transition-opacity duration-500 hover:opacity-60 ;
+    @media (max-width: $openNav) {
+      @apply block text-[30px] leading-[100px]
+    }
+  }
+
+  div {
+    @media (max-width: $openNav) { @apply p-[30px] flex-col gap-0 m-auto } 
+  }
+}
+
+.nav-icon { 
+  @apply hidden w-[30px] h-[18px] 
+  relative z-50 cursor-pointer;
+
+  span { 
+    @apply h-[3px] bg-white duration-500 
+    w-full absolute left-0 transition-all; top: calc(50% - 1.5px); 
+  }
+
+  span:first-child { @apply top-0 }
+  span:last-child { @apply top-auto bottom-0 }
+
+  &.nav-active span:nth-child(2) { @apply scale-0 } 
+  &.nav-active span:first-child { @apply -rotate-45; top:calc(50% - 1.5px); }
+  &.nav-active span:last-child { @apply rotate-45; bottom:calc(50% - 1.5px); } 
+
+  @media (max-width: $openNav) { @apply block }
+}

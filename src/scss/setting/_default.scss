@@ -1,0 +1,13 @@
+body {
+  @apply font-MonumentExtended text-white bg-black;
+
+  &.body-lock { @apply overflow-hidden }
+}
+
+.box { @apply max-w-[1280px] w-full px-[20px] mx-auto; }
+
+.hover {  @apply transition-opacity duration-500 hover:opacity-60 }
+
+// lazy-load
+.parent img { @apply bg-lazy-load-bg w-full block; }
+// .parent>img.lazy[data-src="./img/"][src="base64"][alt="name"]

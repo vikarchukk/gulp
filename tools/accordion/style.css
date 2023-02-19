@@ -1,0 +1,110 @@
+* {margin: 0;box-sizing: border-box;}
+
+body {
+	background-color: #f1f1f1;
+	color: #111111;
+	font-family: sans-serif;
+	padding-top: 30vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.accordion { }
+
+/* ---------- акардіон ---------- */
+
+.accordion__item {
+	border: 1px solid #101010;
+	max-width: 480px;
+}
+
+.accordion__item:nth-child(2){border-top:0;}
+.accordion__item:nth-child(3){border-top:0;}
+
+/* ---------- /акардіон ---------- */
+
+/* ---------- заговолок ---------- */
+
+.accordion__header {
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 19px;
+
+	cursor: pointer;
+
+	transition: all 250ms ease-in-out;
+
+	font-size: 15px;
+}
+
+.accordion__open .accordion__header {
+	color: #f0f0f0;
+	background-color: #101010;
+}
+
+/* ---------- /заговолок ---------- */
+
+/* ---------- контент ---------- */
+
+.accordion__content {
+	padding: 19px;
+	display: none;
+}
+
+.accordion__open .accordion__content {display: block;}
+
+/* ---------- /контент ---------- */
+
+/* ---------- плюс анімація ---------- */
+
+.accordion__expand {
+	position: relative;
+	width: 20px;
+    height: 20px;
+    transition: all .3s ease;
+}
+
+.accordion__open .accordion__expand {
+	transform: rotate(-90deg);
+}
+
+.accordion__expand::before {
+	content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 2px;
+    height: 15px;
+
+    background-color: #101010;
+}
+
+.accordion__open .accordion__expand::before {background-color: #f0f0f0;}
+
+.accordion__expand::after {
+	content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 15px;
+    height: 2px;
+
+    background-color: #101010;
+    opacity: 1;
+    transition: all .2s ease;
+}
+
+.accordion__open .accordion__expand::after {opacity: 0;background-color: #f0f0f0;}
+
+/* ---------- /плюс анімація ---------- */
